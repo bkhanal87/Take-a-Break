@@ -23,7 +23,7 @@ Food.init (
         },
 
         food_price: {
-            type: DataTypes.DECIMAL,
+            type: DataTypes.DECIMAL(10,2),
             allowNull: false,
         },
 
@@ -45,7 +45,7 @@ Food.init (
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: 'category',
+        modelName: 'food',
       }
 )
 
