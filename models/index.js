@@ -21,4 +21,13 @@ Review.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+// Creating Relations, Food can have multiple reivews, but reviews can have only one food
+Food.hasMany(Review, {
+    foreignKey: 'food_id'
+});
+
+Review.belongsTo(Food, {
+    foreignKey: 'food_id'
+});
+
 module.exports = { User, Category, Food, Review };
