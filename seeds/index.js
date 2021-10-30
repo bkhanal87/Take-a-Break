@@ -1,18 +1,15 @@
-const { Category } = require('../models');
+const sequelize = require('../config/connection');
+const seedCategory = require('./categoryData');
+const seedFood = require('./foodData');
 
-const categorydata = [
-  {
-    name: 'Appetizers',
+const seedAll = async () => {
+  await sequelize.sync({ force: true });
 
-  },
-  {
-    name: 'Entree',
-  },
-  {
-    name: 'Appetizers',
-  },
-];
+  await seedCategory();
 
-const seedCategory = () => Category.bulkCreate(categorydata);
+  await seedFood();
 
-module.exports = seedCategory;
+  process.exit(0);
+};
+
+seedAll();
