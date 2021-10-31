@@ -1,5 +1,7 @@
 const router = require('express').Router();
-const { Category, Food, Review, User  } = require('../models');
+const { Category, Food, Review  } = require('../models');
+// Import the custom middleware
+const withAuth = require('../utils/auth');
 
 // GET all categories for homepage
 router.get('/', async (req, res) => {
@@ -16,6 +18,7 @@ router.get('/', async (req, res) => {
     const categories = dbCategoryData.map((category) =>
       category.get({ plain: true })
     );
+  
 
     res.render('homepage', {
       categories,
@@ -27,7 +30,8 @@ router.get('/', async (req, res) => {
 });
 
 // GET one category
-router.get('/category/:id', async (req, res) => {
+// Use the custom middleware before allowing the user to access the gallery
+router.get('/category/:id', withAuth, async (req, res) => {
   try {
     const dbCategoryData = await Category.findByPk(req.params.id, {
       include: [
@@ -53,7 +57,8 @@ router.get('/category/:id', async (req, res) => {
 });
 
 // GET one food
-router.get('/food/:id', async (req, res) => {
+// Use the custom middleware before allowing the user to access the food
+router.get('/food/:id', withAuth, async (req, res) => {
   try {
     const dbFoodData = await Food.findByPk(req.params.id);
 
@@ -65,5 +70,48 @@ router.get('/food/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// GET one review
+// Use the custom middleware before allowing the user to access the review
+router.get('/review/:id', withAuth, async (req, res) => {
+  try {
+    const dbReviewData = await Review.findByPk(req.params.id);
+
+    const review = dbReviewData.get({ plain: true });
+    // Send over the 'loggedIn' session variable to the 'homepage' template
+    res.render('review', { review, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+
+// // GET one user
+// // Use the custom middleware before allowing the user to access the user
+// router.get('/user/:id', withAuth, async (req, res) => {
+//   try {
+//     const dbUserData = await User.findByPk(req.params.id);
+
+//     const user = dbUserData.get({ plain: true });
+
+//     res.render('user', { user });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
+
+// Login route
+router.get('/login', (req, res)=> {
+  // If the user is already logged in, redirect to the homepage
+  if (req.session.loggedIn) {
+    res.redirect('/');
+    return;
+  }
+  // Otherwise, render the 'login' template
+  res.render('login');
+});
+
 
 module.exports = router;
