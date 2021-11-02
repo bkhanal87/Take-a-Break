@@ -29,7 +29,7 @@ const sess = {
 // Add express-session and store as Express.js middleware
 // app.use(session(sess));
 
-app.engine('handlebars', exphbs());
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
