@@ -29,6 +29,46 @@ router.get('/', async (req, res) => {
   }
 });
 
+// Appetizers Route
+router.get('/appetizers', async (req, res) => {
+  try {
+    res.render('appetizers')
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+// Entree Route
+router.get('/entrees', async (req, res) => {
+  try {
+    res.render('entrees')
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+// Desserts Route
+router.get('/desserts', async (req, res) => {
+  try {
+    res.render('desserts')
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+// Drinks Route
+router.get('/drinks', async (req, res) => {
+  try {
+    res.render('drinks')
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
 // GET one category
 // Use the custom middleware before allowing the user to access the gallery
 router.get('/category/:id', withAuth, async (req, res) => {
