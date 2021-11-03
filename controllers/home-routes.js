@@ -6,22 +6,7 @@ const withAuth = require('../utils/auth');
 // GET all categories for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbCategoryData = await Category.findAll({
-      include: [
-        {
-          model: Food,
-          attributes: ['food_name', 'food_description'],
-        },
-      ],
-    });
-
-    const categories = dbCategoryData.map((category) =>
-      category.get({ plain: true })
-    );
-  
-
     res.render('homepage', {
-      categories,
     });
   } catch (err) {
     console.log(err);
@@ -32,7 +17,19 @@ router.get('/', async (req, res) => {
 // Appetizers Route
 router.get('/appetizers', async (req, res) => {
   try {
-    res.render('appetizers')
+    const appetizerData = await Food.findAll({
+      where: {
+        category_id: 1
+      },
+    });
+
+    const foods = appetizerData.map((food) =>
+      food.get({ plain: true })
+    );
+
+    res.render('appetizers', {
+      foods,
+    })
   }
   catch (err) {
     res.status(500).json(err);
