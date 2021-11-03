@@ -39,7 +39,19 @@ router.get('/appetizers', async (req, res) => {
 // Entree Route
 router.get('/entrees', async (req, res) => {
   try {
-    res.render('entrees')
+    const entreeData = await Food.findAll({
+      where: {
+        category_id: 2
+      },
+    });
+
+    const foods = entreeData.map((food) =>
+      food.get({ plain: true })
+    );
+
+    res.render('entrees', {
+      foods,
+    })
   }
   catch (err) {
     res.status(500).json(err);
@@ -49,7 +61,19 @@ router.get('/entrees', async (req, res) => {
 // Desserts Route
 router.get('/desserts', async (req, res) => {
   try {
-    res.render('desserts')
+    const dessertData = await Food.findAll({
+      where: {
+        category_id: 3
+      },
+    });
+
+    const foods = dessertData.map((food) =>
+      food.get({ plain: true })
+    );
+
+    res.render('desserts', {
+      foods,
+    })
   }
   catch (err) {
     res.status(500).json(err);
@@ -59,7 +83,19 @@ router.get('/desserts', async (req, res) => {
 // Drinks Route
 router.get('/drinks', async (req, res) => {
   try {
-    res.render('drinks')
+    const drinkData = await Food.findAll({
+      where: {
+        category_id: 4
+      },
+    });
+
+    const foods = drinkData.map((food) =>
+      food.get({ plain: true })
+    );
+
+    res.render('drinks', {
+      foods,
+    })
   }
   catch (err) {
     res.status(500).json(err);
