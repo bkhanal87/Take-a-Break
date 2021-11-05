@@ -102,6 +102,32 @@ router.get('/drinks', async (req, res) => {
   }
 })
 
+// See-Reviews Route
+router.get('/see-reviews', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: Food,
+          attributes: ['food_name', 'food_description'],
+        }
+      ]
+    });
+
+    const reviews = reviewData.map((food) =>
+      food.get({ plain: true })
+    );
+
+    res.render('see-reviews', {
+      reviews,
+    })
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+
 // Login route
 router.get('/login', (req, res)=> {
   // If the user is already logged in, redirect to the homepage
