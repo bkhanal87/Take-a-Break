@@ -1,3 +1,19 @@
-{{#each reviews as |review| }}
-<h1>{{review.category_id}}</h1>
-{{/each}}
+
+
+<section class="bg-secondary">
+    {{#each reviews as |review| }}
+    <br/>
+    <h2 class= "text-white text-center rounded font-weight-bold headline" >{{review_name}}</h2>
+    <p class= "text-white text-center rounded font-weight-bold headline" >{{user_id}}</p>
+    <p class= "text-light text-center tagline"> {{food_id}}</p>
+    <p class= "text-light text-center tagline"> {{review_description}}</p>
+    
+    
+  
+   <br/>
+   {{/each}}
+     
+    
+    
+  </div>
+</section>
