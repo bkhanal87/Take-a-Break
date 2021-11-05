@@ -83,21 +83,27 @@ router.get('/desserts', async (req, res) => {
   }
 })
 
-// Drinks Route
-router.get('/drinks', async (req, res) => {
+// Appetizers-Reviews Route
+router.get('/appetizers-reviews', async (req, res) => {
   try {
-    const drinkData = await Food.findAll({
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: Food,
+          attributes: ['food_name', 'food_description'],
+        },
+      ],
       where: {
-        category_id: 4
+        category_id: 1
       },
     });
 
-    const foods = drinkData.map((food) =>
+    const reviews = reviewData.map((food) =>
       food.get({ plain: true })
     );
 
-    res.render('drinks', {
-      foods,
+    res.render('appetizers-reviews', {
+      reviews,
     })
   }
   catch (err) {
@@ -105,23 +111,54 @@ router.get('/drinks', async (req, res) => {
   }
 })
 
-// See-Reviews Route
-router.get('/see-reviews', async (req, res) => {
+// Entrees-Reviews Route
+router.get('/entrees-reviews', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       include: [
         {
           model: Food,
           attributes: ['food_name', 'food_description'],
-        }
-      ]
+        },
+      ],
+      where: {
+        category_id: 2
+      },
     });
 
     const reviews = reviewData.map((food) =>
       food.get({ plain: true })
     );
 
-    res.render('see-reviews', {
+    res.render('entrees-reviews', {
+      reviews,
+    })
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+// Desserts Review Routes
+router.get('/desserts-reviews', async (req, res) => {
+  try {
+    const reviewData = await Review.findAll({
+      include: [
+        {
+          model: Food,
+          attributes: ['food_name', 'food_description'],
+        },
+      ],
+      where: {
+        category_id: 3
+      },
+    });
+
+    const reviews = reviewData.map((food) =>
+      food.get({ plain: true })
+    );
+
+    res.render('desserts-reviews', {
       reviews,
     })
   }
