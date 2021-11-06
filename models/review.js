@@ -15,11 +15,25 @@ Review.init (
         review_name: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Please enter the name of your review'
+                },
+                isAlphanumeric: true
+
+            }
         },
 
         review_description: {
             type: DataTypes.STRING,
             allowNull: false,
+            validate: {
+                notNull: {
+                    msg: 'Please enter the name of your review'
+                },
+                isAlphanumeric: true,
+                max: 100,
+            }
         },
         
         category_id: {
