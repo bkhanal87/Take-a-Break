@@ -1,7 +1,7 @@
-const User = require('./User');
-const Category = require('./Category');
-const Food = require('./Food');
-const Review = require('./Review');
+const User = require('./user');
+const Category = require('./category');
+const Food = require('./food');
+const Review = require('./review');
 
 // Creating relations, Categories can have multiple foods, but foods have one category
 Category.hasMany(Food, {
