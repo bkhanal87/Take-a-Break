@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
       }
     );
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -89,13 +88,14 @@ router.get('/appetizer-reviews', async (req, res) => {
     const reviewData = await Review.findAll({
       include: [
         {
+          where: {
+            category_id: 1
+          },
           model: Food,
           attributes: ['food_name', 'food_description'],
         },
       ],
-      where: {
-        category_id: 1
-      },
+      
     });
 
     const reviews = reviewData.map((food) =>
@@ -117,13 +117,14 @@ router.get('/entree-reviews', async (req, res) => {
     const reviewData = await Review.findAll({
       include: [
         {
+          where: {
+            category_id: 2
+          },
           model: Food,
           attributes: ['food_name', 'food_description'],
         },
       ],
-      where: {
-        category_id: 2
-      },
+      
     });
 
     const reviews = reviewData.map((food) =>
@@ -145,13 +146,14 @@ router.get('/dessert-reviews', async (req, res) => {
     const reviewData = await Review.findAll({
       include: [
         {
+          where: {
+            category_id: 3
+          },
           model: Food,
           attributes: ['food_name', 'food_description'],
         },
       ],
-      where: {
-        category_id: 3
-      },
+      
     });
 
     const reviews = reviewData.map((food) =>
