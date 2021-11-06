@@ -1,0 +1,41 @@
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    background: #e9eaea;
+    font-family: roboto;
+    user-select: none;
+  }
+  
+  .container{
+    width: 450px;
+    margin: 30px auto;
+  }
+  
+  .signup,
+  .login{
+    width: 50%;
+    background: #fff;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .signup-form,
+  .login-form{
+    background: rgb(5, 2, 2);
+    padding: 40px;
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    height: 400px;
+  }
+  
+
+ 
