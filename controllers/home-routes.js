@@ -30,7 +30,7 @@ router.get('/appetizers', async (req, res) => {
       food.get({ plain: true })
     );
 
-    res.render('appetizers', {
+    res.render('see-food', {
       foods,
     })
   }
@@ -52,7 +52,7 @@ router.get('/entrees', async (req, res) => {
       food.get({ plain: true })
     );
 
-    res.render('entrees', {
+    res.render('see-food', {
       foods,
     })
   }
@@ -74,7 +74,7 @@ router.get('/desserts', async (req, res) => {
       food.get({ plain: true })
     );
 
-    res.render('desserts', {
+    res.render('see-food', {
       foods,
     })
   }
@@ -84,7 +84,7 @@ router.get('/desserts', async (req, res) => {
 })
 
 // Appetizers-Reviews Route
-router.get('/appetizers-reviews', async (req, res) => {
+router.get('/appetizer-reviews', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       include: [
@@ -102,7 +102,7 @@ router.get('/appetizers-reviews', async (req, res) => {
       food.get({ plain: true })
     );
 
-    res.render('appetizers-reviews', {
+    res.render('see-reviews', {
       reviews,
     })
   }
@@ -112,7 +112,7 @@ router.get('/appetizers-reviews', async (req, res) => {
 })
 
 // Entrees-Reviews Route
-router.get('/entrees-reviews', async (req, res) => {
+router.get('/entree-reviews', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       include: [
@@ -130,7 +130,7 @@ router.get('/entrees-reviews', async (req, res) => {
       food.get({ plain: true })
     );
 
-    res.render('entrees-reviews', {
+    res.render('see-reviews', {
       reviews,
     })
   }
@@ -140,7 +140,7 @@ router.get('/entrees-reviews', async (req, res) => {
 })
 
 // Desserts Review Routes
-router.get('/desserts-reviews', async (req, res) => {
+router.get('/dessert-reviews', async (req, res) => {
   try {
     const reviewData = await Review.findAll({
       include: [
@@ -158,7 +158,7 @@ router.get('/desserts-reviews', async (req, res) => {
       food.get({ plain: true })
     );
 
-    res.render('desserts-reviews', {
+    res.render('see-reviews', {
       reviews,
     })
   }
