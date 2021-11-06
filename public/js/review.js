@@ -47,7 +47,7 @@ fetch(url)
 
 
 let submitReview = () => {
-    const food_id = document.querySelector('#foodSelect').value
+    let food_id
     
     const review_description = document.querySelector('#review_description').value
 
@@ -55,20 +55,26 @@ let submitReview = () => {
 
     const data = { food_id: food_id, review_description: review_description, review_name: review_name };
     
+  if (document.querySelector('#foodSelect').value === "Select Food") {
+    window.alert("Please select a food")
+  } else {
+    food_id = document.querySelector('#foodSelect').value
+
     fetch('/api/review', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('Success:', data);
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
 }
 
 
