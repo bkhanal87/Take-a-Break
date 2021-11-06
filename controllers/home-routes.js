@@ -20,6 +20,12 @@ router.get('/', async (req, res) => {
 router.get('/appetizers', async (req, res) => {
   try {
     const appetizerData = await Food.findAll({
+      
+      include: [{
+        model: Category,
+        attributes: ['category_name'],
+      }],
+
       where: {
         category_id: 1
       },
@@ -42,6 +48,12 @@ router.get('/appetizers', async (req, res) => {
 router.get('/entrees', async (req, res) => {
   try {
     const entreeData = await Food.findAll({
+
+      include: [{
+        model: Category,
+        attributes: ['category_name'],
+      }],
+
       where: {
         category_id: 2
       },
@@ -64,6 +76,12 @@ router.get('/entrees', async (req, res) => {
 router.get('/desserts', async (req, res) => {
   try {
     const dessertData = await Food.findAll({
+
+      include: [{
+        model: Category,
+        attributes: ['category_name'],
+      }],
+
       where: {
         category_id: 3
       },
@@ -122,11 +140,12 @@ router.get('/entree-reviews', async (req, res) => {
           },
           model: Food,
           attributes: ['food_name', 'food_description'],
+          
+          
         },
       ],
       
     });
-
     const reviews = reviewData.map((food) =>
       food.get({ plain: true })
     );

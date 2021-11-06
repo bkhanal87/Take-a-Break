@@ -5,10 +5,10 @@
     <h2 class= "text-white text-center rounded font-weight-bold tagline" >{{food_name}}</h2>
     <p class= "text-light text-center tagline"> {{food_description}}</p>
     <p class= "text-light text-center punchline"> ${{food_price}}</p>
-    <img class= "mx-auto d-block bg-secondary img-thumbnail headline" 
-         style="width: 50%"
-         src="/images/Appetizers/{{food_img}}" 
-         alt="{{food_description}}">
+      <img class= "mx-auto d-block bg-secondary img-thumbnail headline" 
+          style="width: 50%"
+          src="/images/{{category.category_name}}/{{food_img}}" 
+          alt="{{food_description}}">
    <br/>
    {{/each}}
      
