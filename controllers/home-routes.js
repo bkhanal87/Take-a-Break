@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, Food, Review  } = require('../models');
+const { Category, Food, Review, User  } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -160,6 +160,27 @@ router.get('/dessert-reviews', async (req, res) => {
 
     res.render('see-reviews', {
       reviews,
+    })
+  }
+  catch (err) {
+    res.status(500).json(err);
+  }
+})
+
+// Add Reviews Routes
+router.get('/add-reviews', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['username', 'ASC']],
+    });
+
+    const users = userData.map((project) => project.get({ plain: true }));
+
+    res.render('add-reviews', {
+      users,
+      // Pass the logged in flag to the template
+      loggedIn: req.session.loggedIn,
     })
   }
   catch (err) {
