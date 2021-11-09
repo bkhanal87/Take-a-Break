@@ -19,8 +19,6 @@ Review.init (
                 notNull: {
                     msg: 'Please enter the name of your review'
                 },
-                isAlphanumeric: true
-
             }
         },
 
@@ -31,8 +29,6 @@ Review.init (
                 notNull: {
                     msg: 'Please enter the name of your review'
                 },
-                isAlphanumeric: true,
-                max: 100,
             }
         },
         

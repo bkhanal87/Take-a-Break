@@ -4,6 +4,7 @@ const submitButton = document.querySelector("#submit-review");
 submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     submitReview();
+    window.alert('Thank you for your review!')
 })
 
 function getFoodList () {
@@ -47,18 +48,13 @@ fetch(url)
 
 
 let submitReview = () => {
-    let food_id
+    let food_id = document.querySelector('#foodSelect').value
     
     const review_description = document.querySelector('#review_description').value
 
     const review_name = document.querySelector('#review_name').value
 
     const data = { food_id: food_id, review_description: review_description, review_name: review_name };
-    
-  if (document.querySelector('#foodSelect').value === "Select Food") {
-    window.alert("Please select a food")
-  } else {
-    food_id = document.querySelector('#foodSelect').value
 
     fetch('/api/review', {
       method: 'POST',
@@ -75,7 +71,6 @@ let submitReview = () => {
       console.error('Error:', error);
     });
   }
-}
 
 
 
