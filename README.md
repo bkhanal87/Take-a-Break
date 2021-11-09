@@ -21,7 +21,19 @@ ScrollReveal- JS library
 
 
 ## Usage
-After navigating to the application through the link, users open to a welcome page with a responsive nav bar. Click the login button to login or sign up in order to get access to adding reviews to restaurant foods. Without logining in users are able to see the menu and reviews left by others.
+You can access the deployed application here: https://enigmatic-hamlet-26860.herokuapp.com/.
+After navigating to the application through the link, users open to a welcome page with a responsive nav bar.
+![Home Screen](\public\images\Screenshots\homeScreenShot.png)  
+
+Navigate to the login button to login or sign up. This gives users access to adding reviews to any of the foods on the menu.
+![Login Screen](\public\images\Screenshots\loginScreenShot.png)  
+
+
+![Add Review Screen](\public\images\Screenshots\addReviewScreenShot.png)  
+
+Without logging in users are able to browse the menu.
+
+
 
 ## Licensing
 Licensed under [MIT license](LICENSE).
