@@ -8,7 +8,9 @@
     background: #e9eaea;
     font-family: roboto;
     user-select: none;
+    margin:0%
   }
+
   
   .container{
     width: 450px;
@@ -38,4 +40,19 @@
   }
   
 
+  
+  img{
+    width:100%;
+ }
+ .centered {
+     position: absolute;
+     top: 25%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+ }
+ .welcome {
+     position: relative;
+     top: 5%;
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ }
  
