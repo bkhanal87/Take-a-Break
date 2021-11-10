@@ -21,7 +21,8 @@ ScrollReveal- JS library
 
 
 ## Usage
-You can access the deployed application here: https://enigmatic-hamlet-26860.herokuapp.com/.
+You can access the deployed application here: https://enigmatic-hamlet-26860.herokuapp.com/.  
+
 After navigating to the application through the link, users open to a welcome page with a responsive nav bar.
 ![Home Screen](public\images\Screenshots\homeScreenShot.png)  
 
