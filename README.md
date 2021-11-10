@@ -24,13 +24,13 @@ ScrollReveal- JS library
 You can access the deployed application here: https://enigmatic-hamlet-26860.herokuapp.com/.  
 
 After navigating to the application through the link, users open to a welcome page with a responsive nav bar.
-![Home Screen](public\images\Screenshots\homeScreenShot.png)  
+![Home Screen](public/images/Screenshots/homeScreenShot.png?raw=true)  
 
 Navigate to the login button to login or sign up. This gives users access to adding reviews to any of the foods on the menu.
-![Login Screen](public\images\Screenshots\loginScreenShot.png)  
+![Login Screen](public/images/Screenshots/loginScreenShot.png?raw=true)  
 
 
-![Add Review Screen](public\images\Screenshots\addReviewScreenShot.png)  
+![Add Review Screen](public/images/Screenshots/addReviewScreenShot.png)  
 
 Without logging in users are able to browse the menu.
 
