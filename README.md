@@ -21,27 +21,33 @@ ScrollReveal- JS library
 
 
 ## Usage
-You can access the deployed application here: https://enigmatic-hamlet-26860.herokuapp.com/.  
 
-After navigating to the application through the link, users open to a welcome page with a responsive nav bar.
+*You can access the deployed application here: https://enigmatic-hamlet-26860.herokuapp.com/.  
+
+*After navigating to the application through the link, users open to a welcome page with a responsive nav bar.
 ![Home Screen](public/images/Screenshots/homeScreenShot.png?raw=true)  
 
-Navigate to the login button to login or sign up. This gives users access to adding reviews to any of the foods on the menu.
+*Navigate to the login button to login or sign up. This gives users access to adding reviews to any of the foods on the menu.
 ![Login Screen](public/images/Screenshots/loginScreenShot.png?raw=true)  
 
 
-![Add Review Screen](public/images/Screenshots/addReviewScreenShot.png)  
+*![Add Review Screen](public/images/Screenshots/addReviewScreenShot.png)  
 
-Without logging in users are able to browse the menu.
-
-
+*Without logging in users are able to browse the menu.
 
 ## Licensing
 Licensed under [MIT license](LICENSE).
 
 ## Collaborators
-Christian Tanicala: Database  
-Basu Khanal: Back-end  
-Cameron White: Front-end
+
+**Main Branch**
+
+Database: Christian Tanicala - [GitHub Profile](https://github.com/Chtanicala)
+
+**Additional Branches**
+
+Back-end: Basu Khanal - [GitHub Profile](https://https://github.com/bkhanal87)
+
+Cameron White: Front-end - [GitHub Profile](https://github.com/CamJade)
 
 
