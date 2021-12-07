@@ -1,6 +1,6 @@
 [![license](https://img.shields.io/badge/license-MIT-orange)](https://shields.io)  
 
-# Team-4-Project-2
+# Take-a-Break
  
 ## Table of Contents 
 [Description](#description)  
