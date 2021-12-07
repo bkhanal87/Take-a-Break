@@ -13,10 +13,10 @@
 This is a website for Take a Break restaurant where users can browse the menu, read reviews, and leave reviews. By logging in users are granted access to write reviews for menu items and guests viewing the site can see these reviews. 
 
 ## Technologies
-Node.js and Express.js- creating a RESTful API
-MySQL and Sequelize ORM- database
-Handlebars.js- template engine
-Bootstrap- CSS framework
+Node.js and Express.js- creating a RESTful API,
+MySQL and Sequelize ORM- database,
+Handlebars.js- template engine,
+Bootstrap- CSS framework,
 ScrollReveal- JS library
 
 
@@ -29,8 +29,6 @@ ScrollReveal- JS library
 
 *Navigate to the login button to login or sign up. This gives users access to adding reviews to any of the foods on the menu.
 ![Login Screen](public/images/Screenshots/loginScreenShot.png?raw=true)  
-
-
 *![Add Review Screen](public/images/Screenshots/addReviewScreenShot.png)  
 
 *Without logging in users are able to browse the menu.
