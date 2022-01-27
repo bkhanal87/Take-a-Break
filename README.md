@@ -4,6 +4,7 @@
  
 ## Table of Contents 
 [Description](#description)  
+[Installation](#installation)
 [Technologies](#technologies)  
 [Usage/Link](#usage/link)  
 [License](#licensing)  
@@ -11,6 +12,8 @@
  
 ## Description
 This is a website for Take a Break restaurant where users can browse the menu, read reviews, and leave reviews. By logging in users are granted access to write reviews for menu items and guests viewing the site can see these reviews. 
+
+## Installation
 
 ## Technologies
 Node.js and Express.js- creating a RESTful API,
@@ -47,5 +50,12 @@ Database: Christian Tanicala - [GitHub Profile](https://github.com/Chtanicala)
 Back-end: Basu Khanal - [GitHub Profile](https://https://github.com/bkhanal87)
 
 Cameron White: Front-end - [GitHub Profile](https://github.com/CamJade)
+
+## Badges
+
+## How to Contribute to the Project
+
+## Tests
+
 
 
