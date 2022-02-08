@@ -5,25 +5,63 @@
 ## Table of Contents 
 [Description](#description)  
 [Installation](#installation)
-[Technologies](#technologies)  
+[Process](#process)  
 [Usage/Link](#usage/link)  
 [Collaborators](#collaborators)
-[Badges](#badges)
-[How to contribute to the project]
-[Tests](#tests)
+
  
 ## Description
 This is a website for Take a Break restaurant where users can browse the menu, read reviews, and leave reviews. By logging in users are granted access to write reviews for menu items and guests viewing the site can see these reviews. 
 
-## Installation
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+## User Story##
+As a user, I want to browse the menu when I visit the restaurant website, read reviews other users have left, and leave reviews.
 
-## Technologies
+## Motivations for Development ##
+We visited several restaurant websites online and noticed that users had to navigate to multiple screens to add reviews and see reviews created by people who had ordered food from these websites. We wanted to create a website from scratch that had a polished UI, was responsive, and accepted and responded to user input. 
+
+## Challenges ##
+Coming up with what we wanted to do: at first, we decided to work on restaurants in Columbus but we found out later that the task was too vague to accomplish so we decided to stick with one restaurant
+Our application broke down in the last minute application so we had to spend extra time fixing it
+
+## Successes ##
+Once we agreed on one restaurant, everything went smoothly
+We successfully completed all tasks on time even with one developer short
+We didn't have too many merge conflicts
+
+## Installation
+Installation: 
+Clone Repository
+git clone https://github.com/herokuapp/HotSpot.git
+ Install Dependencies
+All NPM packages required for this application (Express, Compression, Mongoose, Lite-Server and Morgan) are already listed as dependencies in the package.json file. Run the command 'npm i' command in your terminal at the root directory level to install the packages.
+Ensure you have Node.js installed on your machine. The application will be invoked by entering node server.js in the command line.
+Start Application
+You will see App running on port 3000! in the console. You can then view the app on http://localhost:3000/.
+Installation:
+This program can be run through a browser using the above link to the the deployed application. Alternatively, to run this application locally you will need to:
+Clone this repository to receive all of the files
+Set up your environment variables in a .env file
+Run "npm install" in the command line of your terminal to set up all of the dependencies
+Initialize your database by running the "schema.sql" file with MySQL
+Populate the existing database items by running "npm run seed" in your terminal
+Run "npm start" to start the application's connection
+Go to the url of the application (http//:localhost:3001) to begin using it
+
+
+## Process
+
+## Technologies Used ##
 Node.js and Express.js- creating a RESTful API,
 MySQL and Sequelize ORM- database,
 Handlebars.js- template engine,
 Bootstrap- CSS framework,
 ScrollReveal- JS library
+
+## Task Breakdown ##
+Task breakdown:
+Database/Routing- Christian Tanicala
+Back-End- Basu Khanal
+Front-End- Cameron White
 
 
 ## Usage
@@ -54,11 +92,6 @@ Back-end: Basu Khanal - [GitHub Profile](https://https://github.com/bkhanal87)
 
 Cameron White: Front-end - [GitHub Profile](https://github.com/CamJade)
 
-## Badges
-
-## How to Contribute to the Project
-
-## Tests
 
 
 
