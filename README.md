@@ -13,8 +13,23 @@
 ## Description
 This is a website for Take a Break restaurant where users can browse the menu, read reviews, and leave reviews. By logging in users are granted access to write reviews for menu items and guests viewing the site can see these reviews. 
 
-## User Story##
+## User Story  ##
 As a user, I want to browse the menu when I visit the restaurant website, read reviews other users have left, and leave reviews.
+
+## Features ## 
+This application has the following features:
+
+1.
+2.
+3.
+4.
+5.
+## Directions for Future Development ##
+Create a way to place orders
+Differentiate food critics and regular users
+Allow reviewers to upload pictures
+Allow for star rating to be included in reviews
+
 
 ## Motivations for Development ##
 We visited several restaurant websites online and noticed that users had to navigate to multiple screens to add reviews and see reviews created by people who had ordered food from these websites. We wanted to create a website from scratch that had a polished UI, was responsive, and accepted and responded to user input. 
@@ -29,15 +44,14 @@ We successfully completed all tasks on time even with one developer short
 We didn't have too many merge conflicts
 
 ## Installation
-Installation: 
 Clone Repository
-git clone https://github.com/herokuapp/HotSpot.git
+git clone  https://enigmatic-hamlet-26860.herokuapp.com/
  Install Dependencies
-All NPM packages required for this application (Express, Compression, Mongoose, Lite-Server and Morgan) are already listed as dependencies in the package.json file. Run the command 'npm i' command in your terminal at the root directory level to install the packages.
+All NPM packages required for this application (Express, Sequelize, Bootstrap, ScrollReveal) are already listed as dependencies in the package.json file. Run the command 'npm i' command in your terminal at the root directory level to install the packages.
 Ensure you have Node.js installed on your machine. The application will be invoked by entering node server.js in the command line.
 Start Application
 You will see App running on port 3000! in the console. You can then view the app on http://localhost:3000/.
-Installation:
+
 This program can be run through a browser using the above link to the the deployed application. Alternatively, to run this application locally you will need to:
 Clone this repository to receive all of the files
 Set up your environment variables in a .env file
